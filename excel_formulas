@@ -1,0 +1,106 @@
+| Employee ID | Employee Name | Department | Salary |  Sales | Rating |
+| E001        | Rahul         | Sales      |  45000 | 125000 |    4.5 |
+| E002        | Priya         | HR         |  52000 |  98000 |    4.2 |
+| E003        | Amit          | IT         |  60000 | 145000 |    4.8 |
+| E004        | Neha          | Sales      |  48000 | 132000 |    4.6 |
+| E005        | Rohit         | Finance    |  55000 | 110000 |    4.1 |
+| E006        | Anjali        | IT         |  65000 | 158000 |    4.9 |
+| E007        | Vikash        | Sales      |  47000 | 119000 |    4.3 |
+| E008        | Sneha         | HR         |  50000 | 105000 |    4.4 |
+
+
+
+
+
+
+1---What is the total salary of all employees?	
+
+=SUM(D2:D9)
+
+
+2---What is the total sales of all employees?	
+
+=SUM(E2:E9)
+
+
+3---What is the total sales of the Sales department?
+
+=SUMIF(C2:C9,"Sales",E2:E9)
+
+
+4---What is the total salary of the IT department?	
+
+=SUMIF(C2:C9,"IT",D2:D9)
+
+
+
+5--What is the total sales of employees with sales above ₹120,000?	
+
+=SUMIF(E2:E9,">120000",E2:E9)
+
+
+6--What are the total sales of Sales employees with sales above ₹120,000?
+
+=SUMIFS(E2:E9,C2:C9,"Sales",E2:E9,">120000")
+
+
+7---What is the total salary of IT employees with a rating above 4.5?	
+
+=SUMIFS(D2:D9,C2:C9,"IT",F2:F9,">4.5")
+
+
+
+8--COUNT	How many employees are in the table?	
+
+=COUNT(D2:D9)
+
+
+9---How many salary values are recorded?	
+
+=COUNT(D2:D9)
+
+
+
+10---How many employees are in the Sales department?	
+
+=COUNTIF(C2:C9,"Sales")
+
+
+
+11---How many employees have a rating above 4.5?	
+
+=COUNTIF(F2:F9,">4.5")
+
+
+
+
+12---How many Sales employees have sales above ₹120,000?
+
+=COUNTIFS(C2:C9,"Sales",E2:E9,">120000")
+
+
+13---COUNTIFS	How many IT employees have a rating above 4.5?
+
+=COUNTIFS(C2:C9,"IT",F2:F9,">4.5")
+
+
+
+
+15---What is the average salary of Sales employees?
+
+
+=AVERAGEIF(C2:C9,"Sales",D2:D9)
+
+
+
+
+16---What is the average rating of HR employees?
+
+
+=AVERAGEIF(C2:C9,"HR",F2:F9)
+
+
+
+
+
+

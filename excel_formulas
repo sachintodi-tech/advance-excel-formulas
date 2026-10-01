@@ -104,3 +104,157 @@
 
 
 
+17---If an employee's salary is greater than ₹50,000, return "High Salary", otherwise return "Normal Salary".
+
+
+
+=IF(D2>50000,"High Salary","Normal Salary")
+
+
+
+18---If Sales are greater than ₹130,000, return "Good Sales", otherwise return "Needs Improvement".
+
+
+=IF(E2>130000,"Good Sales","Needs Improvement")
+
+
+
+19---Categorize employees based on rating:   4.7 or above → Excellent  , 4.5 or above → Very Good ,4.0 or above → Good , Below 4.0 → Needs Improvement
+
+
+
+=IFS(F2>=4.7,"Excellent",F2>=4.5,"Very Good",F2>=4,"Good",TRUE,"Needs Improvement")
+
+
+
+
+20---Return "Eligible" if Salary is greater than ₹50,000 AND Rating is 4.5 or higher. Otherwise return "Not Eligible".
+
+
+
+=IF(AND(D2>50000,F2>=4.5),"Eligible","Not Eligible")
+
+
+
+
+21---Return "Technical/Business" if the employee belongs to IT OR Finance. Otherwise return "Other Department".
+
+
+
+=IF(OR(C2="IT",C2="Finance"),"Technical/Business","Other Department")
+
+
+
+
+22---Using VLOOKUP, find the salary of employee E004.
+
+
+=VLOOKUP("E004",A2:F9,4,FALSE)
+
+
+
+
+
+
+23---Using VLOOKUP, find the department of employee E006.
+
+
+=VLOOKUP("E006",A2:F9,3,FALSE)
+
+
+
+
+24---Using XLOOKUP, find the sales amount of employee E005.
+
+
+=XLOOKUP("E005",A2:A9,E2:E9)
+
+
+
+25--- Using XLOOKUP, find the employee name whose Employee ID is E008.
+
+
+
+=XLOOKUP("E008",A2:A9,B2:B9)
+
+
+
+
+26---Sort the employee table by Salary from highest to lowest.
+
+
+
+=SORT(A2:F9,4,-1)
+
+
+
+27---Sort the employee table by Rating from lowest to highest.
+
+
+
+=SORT(A2:F9,6,1)
+
+
+
+
+28---Display only the employees who belong to the IT department.
+
+
+
+=FILTER(A2:F9,C2:C9="IT")
+
+
+
+29---Display employees whose Sales are greater than ₹130,000.
+
+
+
+=FILTER(A2:F9,E2:E9>130000)
+
+
+
+30---Display only the employees whose Rating is 4.5 or higher.
+
+
+
+=FILTER(A2:F9,F2:F9>=4.5)
+
+
+
+
+31---Extract the first 2 characters from each Employee ID.
+
+
+
+=LEFT(A2,2)
+
+
+
+
+32---Extract the last 2 characters from each Employee ID.
+
+
+
+=RIGHT(A2,2)
+
+
+
+33---Extract the 2nd and 3rd characters from the Employee ID.
+
+
+=MID(A2,2,2)
+
+
+
+34---Count employees whose Salary is greater than ₹50,000 AND Rating is at least 4.5.
+
+
+=COUNTIFS(D2:D9,">50000",F2:F9,">=4.5")
+
+
+
+35---Find the total Sales of employees whose Department is Sales AND Rating is 4.5 or higher.
+
+
+
+=SUMIFS(E2:E9,C2:C9,"Sales",F2:F9,">=4.5")
